@@ -1,0 +1,45 @@
+---
+swagger: "2.0"
+info:
+  description: "Gets Colors"
+  version: "1.1.0"
+  title: "Colors"
+paths:
+  /color:
+    get:
+      summary: "Gets Colors"
+      operationId: "colorGET"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/inline_response_200"
+      x-swagger-router-controller: "Default"
+    post:
+      summary: "Post Colors"
+      operationId: "colorPOST"
+      parameters: []
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: "#/definitions/inline_response_200_1"
+      x-swagger-router-controller: "Default"
+definitions:
+  inline_response_200_1:
+    properties:
+      color:
+        type: "string"
+        example: "blue"
+      param:
+        type: "integer"
+        example: 1
+  inline_response_200:
+    properties:
+      color:
+        type: "string"
+        example: "Green"
+      param:
+        type: "integer"
+        example: 1
