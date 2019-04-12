@@ -1,0 +1,80 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Manages Employees",
+    "version" : "0.1",
+    "title" : "HR API1",
+    "contact" : {
+      "name" : "Temil",
+      "url" : "http://api.com",
+      "email" : "t.s@smartbear.com"
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/SE-Design/TemilHR_API/0.1",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/user" : {
+      "get" : {
+        "summary" : "Get User.",
+        "description" : "Get Users from DB.",
+        "parameters" : [ {
+          "name" : "first_name",
+          "in" : "query",
+          "description" : "Users first name.",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "name" : {
+                  "type" : "string",
+                  "example" : "Temil",
+                  "description" : "users first name"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Invalid request",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "message" : {
+                  "type" : "string",
+                  "example" : "You have hit an invalid request. Please check your parameters "
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "inline_response_200" : {
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "example" : "Temil",
+          "description" : "users first name"
+        }
+      },
+      "example" : {
+        "name" : "Temil"
+      }
+    },
+    "inline_response_400" : {
+      "properties" : {
+        "message" : {
+          "type" : "string",
+          "example" : "You have hit an invalid request. Please check your parameters "
+        }
+      }
+    }
+  }
+}
