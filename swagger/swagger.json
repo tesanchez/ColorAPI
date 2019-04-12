@@ -1,0 +1,62 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "SampleColors",
+    "version" : "0.0.1",
+    "title" : "ColorsAPISample2"
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/Temil24/ColorsAPISample12/0.0.1",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/color" : {
+      "get" : {
+        "summary" : "This resource gets colors",
+        "description" : "Whic colors will you need",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200"
+            }
+          }
+        }
+      },
+      "post" : {
+        "summary" : "Post Colors",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "inline_response_200_1" : {
+      "properties" : {
+        "color" : {
+          "type" : "string",
+          "example" : "blue"
+        },
+        "param" : {
+          "type" : "integer",
+          "example" : 1
+        }
+      }
+    },
+    "inline_response_200" : {
+      "properties" : {
+        "color" : {
+          "type" : "string",
+          "example" : "Blue"
+        }
+      }
+    }
+  }
+}
