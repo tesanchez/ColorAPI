@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8e06fa56-af77-411f-9e42-2bee4888fb1e" created="2.8.0" activeEnvironment="Default environment" name="REST Project 6" resourceRoot="" updated="2.8.0" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8e06fa56-af77-411f-9e42-2bee4888fb1efileName">REST-Project-6</con:setting>
+  </con:settings>
+  <con:apis id="bab04302-c13f-470d-8a8d-f4c2e1a1422e" name="APIs">
+    <con:settings/>
+  </con:apis>
+  <con:functionalTests id="5dfc11df-e88d-4189-9c31-8e8724fdaa6c" name="Functional &amp; Security Tests">
+    <con:settings/>
+  </con:functionalTests>
+  <con:securityTests id="7df688bb-d144-4368-9899-8da1fc2416d4" name="Security Tests">
+    <con:settings/>
+  </con:securityTests>
+  <con:mockServices id="1c7460da-f691-4efc-956d-07a83c11fa3f" name="Virtual Services">
+    <con:settings/>
+  </con:mockServices>
+  <con:loadUITests id="b99a5eb2-48a5-48da-ba21-952adbd39384" name="Load Tests">
+    <con:settings/>
+  </con:loadUITests>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
